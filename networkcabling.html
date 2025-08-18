@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Network Cabling Solutions - Cat5, Cat6, Cat6a, Fiber Optic Installation">
+    <meta name="keywords" content="network cabling, cat5, cat6, cat6a, fiber optic, structured cabling, installation">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Digital Transformation PLT">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link
+      href="https://api.fontshare.com/v2/css?f=chillax@400,500,700&display=swap"
+      rel="stylesheet"
+    >
+
+    <title>Network Cabling Solutions - Digital Transformations PLT</title>
+    <link rel="icon" type="image/x-icon" href="image/dx_logo.gif">
+    
+    <style>
+      /* Enhanced Service Hero Section */
+      .service-hero-section {
+        height: 100vh;
+        background: 
+          linear-gradient(rgba(52,152,219,0.9), rgba(41,128,185,0.8)),
+          url('image/14.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+      }
+      
+      .service-hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 30% 30%, rgba(52,152,219,0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 70%, rgba(41,128,185,0.3) 0%, transparent 50%);
+        animation: gradientShift 8s ease-in-out infinite;
+      }
+      
+      @keyframes gradientShift {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      
+      .service-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        padding: 0 40px;
+      }
+      
+      .service-hero-content h1 {
+        font-size: 4.5em;
+        font-weight: 800;
+        margin-bottom: 30px;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        animation: titlePulse 4s ease-in-out infinite;
+      }
+      
+      @keyframes titlePulse {
+        0%, 100% { transform: scale(1); text-shadow: 3px 3px 6px rgba(0,0,0,0.3); }
+        50% { transform: scale(1.05); text-shadow: 5px 5px 15px rgba(0,0,0,0.5); }
+      }
+      
+      .service-hero-content p {
+        font-size: 1.4em;
+        font-weight: 500;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      /* Feature Cards Styling */
+      .features-section {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+      }
+      
+      .features-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      
+      .section-title {
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-bottom: 80px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .feature-card {
+        display: flex;
+        align-items: center;
+        background: rgba(255,255,255,0.1);
+        border-radius: 25px;
+        margin-bottom: 60px;
+        overflow: hidden;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.4s ease;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        border: 1px solid rgba(52,152,219,0.5);
+      }
+      
+      .feature-image {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 30px;
+      }
+      
+      .feature-content {
+        flex: 1;
+        padding: 40px;
+      }
+      
+      .feature-content h3 {
+        font-size: 2.2em;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #3498db;
+      }
+      
+      .feature-content p {
+        font-size: 1.1em;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        color: #ecf0f1;
+      }
+      
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .feature-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 1em;
+        color: #bdc3c7;
+        position: relative;
+        padding-left: 30px;
+      }
+      
+      .feature-list li:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      
+      /* Comparison Table Styles */
+      .specs-section {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+        color: white;
+      }
+      
+      .specs-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .comparison-table {
+        background: rgba(255,255,255,0.05);
+        border-radius: 15px;
+        overflow: hidden;
+        backdrop-filter: blur(15px);
+        margin-top: 40px;
+      }
+      
+      .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .comparison-table th {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        padding: 25px 20px;
+        font-weight: 700;
+        font-size: 1.1em;
+        text-align: center;
+      }
+      
+      .comparison-table td {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.95em;
+      }
+      
+      .comparison-table tr:hover {
+        background: rgba(52,152,219,0.1);
+      }
+      
+      /* Specifications Grid */
+      .specs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1400px;
+        margin: 60px auto 0;
+      }
+      
+      .spec-card {
+        background: rgba(255,255,255,0.1);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.4s ease;
+      }
+      
+      .spec-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(52,152,219,0.3);
+        border: 1px solid rgba(52,152,219,0.5);
+      }
+      
+      .spec-card h4 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #3498db;
+      }
+      
+      /* Navigation Section */
+      .navigation-section {
+        padding: 120px 40px;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #1a252f 100%);
+        text-align: center;
+        color: white;
+      }
+      
+      .navigation-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .navigation-title {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-bottom: 30px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .navigation-subtitle {
+        font-size: 1.3em;
+        margin-bottom: 60px;
+        color: #bdc3c7;
+        line-height: 1.6;
+      }
+      
+      .back-button-footer {
+        background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+        transition: all 0.4s ease;
+      }
+      
+      .back-button-footer:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(155, 89, 182, 0.6);
+      }
+    </style>
+  </head>
+
+  <body id="Top" class="service-page">
+    <!-- Navigation -->
+    <header class='header'>
+      <div class="header-logo-section">
+        <a href='index.html' class='logo-link'>
+          <img class='logo' src='image/dx_logo.gif' alt='Digital Transformations PLT'>
+        </a>
+        <div class="company-name">
+          <span class="main-name">Digital Transformations</span><sup class="plt-super">PLT</sup>
+        </div>
+      </div>
+      
+      <input class='side-menu' type='checkbox' id='side-menu'>
+      <label class='hamb' for='side-menu'>
+        <span class='hamb-line'></span>
+      </label>
+      
+      <nav class='nav'>
+        <ul class='menu'>
+          <li><a href='index.html' class='nav-link'>🏠 Home</a></li>
+          <li><a href='service3.html' class='nav-link'>🌐 Network Infrastructure</a></li>
+          <li><a href='contact.html' class='nav-link'>📞 Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="service-hero-section">
+      <div class="service-hero-content">
+        <h1>🔌 Network Cabling</h1>
+        <p>Professional Structured Cabling Solutions</p>
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 30px; backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.2); font-weight: 600; letter-spacing: 1px;">🔌 Cat6 Cabling</span>
+          <span style="background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 30px; backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.2); font-weight: 600; letter-spacing: 1px;">🌐 Fiber Optic</span>
+          <span style="background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 30px; backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.2); font-weight: 600; letter-spacing: 1px;">📋 Certified</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="features-section">
+      <div class="features-container">
+        <h2 class="section-title">Professional Cabling Solutions</h2>
+        
+        <!-- Network Cabling Card with 14.png -->
+        <div class="feature-card">
+          <img src="image/14.png" alt="Cat5 Cat6 Network Cables" class="feature-image">
+          <div class="feature-content">
+            <h3></h3>
+            <h3>🔌 Network Cabling Solutions</h3>
+            <p>Professional structured cabling infrastructure that forms the backbone of your digital operations. Our certified technicians deliver precision installations with guaranteed performance.</p>
+            <ul class="feature-list">
+              <li>Cat5e Cable - Reliable 1 Gbps connectivity, 100MHz bandwidth for standard applications</li>
+              <li>Cat6 Cable - High-performance 10 Gbps up to 55m, 250MHz for modern networks</li>
+              <li>Cat6a Cable - Future-proof 10 Gbps full distance, 500MHz for demanding environments</li>
+              <li>Fiber Optic Installation - Ultra-high speed backbone with unlimited bandwidth potential</li>
+              <li>Professional Cable Management - Organized pathways with proper labeling & documentation</li>
+              <li>Testing & Certification - Full compliance verification with performance guarantees</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Fiber & Advanced Networks Card with 9.jpg background -->
+        <div class="feature-card" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('image/9.jpg'); background-size: cover; background-position: center; color: white;">
+          <div class="feature-content">
+            <h3 style="color: white; margin-top: 20px;">🌟 Fiber & Advanced Networking</h3>
+            <p style="color: #f0f0f0;">Transform your network with cutting-edge fiber optic technology and advanced switching solutions that deliver unprecedented speed, reliability, and future-proof scalability.</p>
+            <ul class="feature-list">
+            <li style="color: #f0f0f0;">Single-mode & Multi-mode Fiber - Long-distance & campus connectivity solutions</li>
+            <li style="color: #f0f0f0;">10Gb/25Gb/40Gb/100Gb Ethernet - Ultra-high speed backbone infrastructure</li>
+            <li style="color: #f0f0f0;">Core Network Design - Hierarchical architecture with redundancy planning</li>
+            <li style="color: #f0f0f0;">VLAN Configuration - Network segmentation for security & performance optimization</li>
+            <li style="color: #f0f0f0;">Redundancy Systems - Automatic failover with zero-downtime switching</li>
+            <li style="color: #f0f0f0;">Software-Defined Networking - Next-generation programmable infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cable Standards Comparison -->
+    <section class="specs-section">
+      <div class="specs-container">
+        <h2 class="section-title">⚔️ Cable Standards Performance Comparison</h2>
+        <p style="text-align: center; font-size: 1.1em; color: #ecf0f1; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Choose the perfect cabling solution based on your performance requirements and future growth plans. Each standard offers distinct advantages for specific networking scenarios.
+        </p>
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>🔍 Cable Type</th>
+                <th>⚡ Max Speed</th>
+                <th>📡 Bandwidth</th>
+                <th>📏 Max Distance</th>
+                <th>🎯 Best Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cat5e</strong></td>
+                <td>1 Gbps<br><small style="color: #666;">Standard Ethernet speed</small></td>
+                <td>100 MHz<br><small style="color: #666;">Basic bandwidth</small></td>
+                <td>100 meters<br><small style="color: #666;">Standard reach</small></td>
+                <td>💼 Basic office networks<br><small style="color: #666;">Cost-effective solution</small></td>
+              </tr>
+              <tr>
+                <td><strong>Cat6</strong></td>
+                <td><span style="color: #007bff; font-weight: bold;">10 Gbps (55m)</span><br><small style="color: #666;">High-speed short distance</small></td>
+                <td><span style="color: #007bff; font-weight: bold;">250 MHz</span><br><small style="color: #666;">Enhanced performance</small></td>
+                <td>100 meters<br><small style="color: #666;">Full distance at 1Gbps</small></td>
+                <td>🏢 Modern business networks<br><small style="color: #666;">Balanced performance & cost</small></td>
+              </tr>
+              <tr>
+                <td><strong>Cat6a</strong></td>
+                <td><span style="color: #28a745; font-weight: bold;">10 Gbps</span><br><small style="color: #666;">Full 10G performance</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">500 MHz</span><br><small style="color: #666;">Superior bandwidth</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">100 meters</span><br><small style="color: #666;">Full distance 10Gbps</small></td>
+                <td>🏗️ High-performance networks<br><small style="color: #666;">Future-proof investment</small></td>
+              </tr>
+              <tr>
+                <td><strong>Fiber (MM)</strong></td>
+                <td><span style="color: #6f42c1; font-weight: bold;">40+ Gbps</span><br><small style="color: #666;">Ultra-high speed</small></td>
+                <td><span style="color: #6f42c1; font-weight: bold;">Unlimited</span><br><small style="color: #666;">No bandwidth limits</small></td>
+                <td>2 kilometers<br><small style="color: #666;">Campus connectivity</small></td>
+                <td>🏫 Campus networks<br><small style="color: #666;">Multi-building connections</small></td>
+              </tr>
+              <tr>
+                <td><strong>Fiber (SM)</strong></td>
+                <td><span style="color: #dc3545; font-weight: bold;">100+ Gbps</span><br><small style="color: #666;">Maximum performance</small></td>
+                <td><span style="color: #dc3545; font-weight: bold;">Unlimited</span><br><small style="color: #666;">Infinite capacity potential</small></td>
+                <td><span style="color: #dc3545; font-weight: bold;">40+ kilometers</span><br><small style="color: #666;">Long-distance capability</small></td>
+                <td>🌐 WAN connections<br><small style="color: #666;">Inter-site connectivity</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Services -->
+    <section class="specs-section" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white;">
+      <div class="specs-container">
+        <h2 class="section-title" style="color: white;">🌟 Professional Cabling Services</h2>
+        <p style="text-align: center; font-size: 1.1em; color: #ecf0f1; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Comprehensive network cabling services from initial consultation to ongoing maintenance. Our certified technicians ensure your cabling infrastructure delivers optimal performance and reliability.
+        </p>
+        <div class="specs-grid">
+          <div class="spec-card">
+            <div style="font-size: 3em; margin-bottom: 20px;">📐</div>
+            <h4 style="color: #3498db; margin-bottom: 15px;">Network Design</h4>
+            <p>Custom cabling architecture planning and implementation tailored to your business requirements and growth projections</p>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #bdc3c7;">
+              ✨ Features: Site surveys, topology design, capacity planning
+            </div>
+          </div>
+          <div class="spec-card">
+            <div style="font-size: 3em; margin-bottom: 20px;">🔌</div>
+            <h4 style="color: #3498db; margin-bottom: 15px;">Cable Installation</h4>
+            <p>Professional structured cabling with comprehensive testing, certification, and detailed documentation for compliance</p>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #bdc3c7;">
+              ✨ Features: Certified installation, testing, labeling, documentation
+            </div>
+          </div>
+          <div class="spec-card">
+            <div style="font-size: 3em; margin-bottom: 20px;">🧪</div>
+            <h4 style="color: #3498db; margin-bottom: 15px;">Testing & Certification</h4>
+            <p>Comprehensive cable testing and performance certification to ensure compliance with industry standards</p>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #bdc3c7;">
+              ✨ Features: Performance testing, compliance verification, detailed reports
+            </div>
+          </div>
+          <div class="spec-card">
+            <div style="font-size: 3em; margin-bottom: 20px;">🏷️</div>
+            <h4 style="color: #3498db; margin-bottom: 15px;">Documentation</h4>
+            <p>Complete cable labeling, mapping, and documentation for easy maintenance and future modifications</p>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #bdc3c7;">
+              ✨ Features: Cable labeling, network maps, maintenance guides
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Section -->
+    <section class="navigation-section">
+      <div class="navigation-content">
+        <h2 class="navigation-title">Ready to Upgrade Your Cabling?</h2>
+        <p class="navigation-subtitle">
+          Our professional cabling solutions provide the foundation for reliable, high-performance networking. 
+          Contact us today to discuss your specific cabling requirements.
+        </p>
+        
+        <!-- Enhanced Back Button -->
+        <div style="margin-top: 60px;">
+          <a href="service3.html" class="back-button-footer" style="color: white; padding: 20px 45px; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 1.25em; display: inline-flex; align-items: center; gap: 15px;">
+            <span style="font-size: 1.4em;">←</span>
+            BACK TO NETWORK INFRASTRUCTURE
+          </a>
+        </div>
+      </div>
+    </section>
+
+  
+  <!-- Enhanced Premium Footer -->
+  <footer style="background: #2c3e50; position: relative; overflow: hidden;">
+    <!-- Animated Background Pattern -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: 
+      radial-gradient(circle at 25% 25%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 10%, rgba(46, 204, 113, 0.06) 0%, transparent 60%);
+      opacity: 0.7;"></div>
+    
+    <!-- Floating Geometric Shapes -->
+    <div style="position: absolute; top: 20%; left: 8%; width: 80px; height: 80px; background: conic-gradient(from 0deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1), rgba(52, 152, 219, 0.1)); border-radius: 50%; animation: rotate 25s linear infinite; opacity: 0.3;"></div>
+    <div style="position: absolute; bottom: 15%; right: 10%; width: 60px; height: 60px; background: linear-gradient(45deg, rgba(46, 204, 113, 0.1), rgba(26, 188, 156, 0.1)); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: float 12s ease-in-out infinite; opacity: 0.2;"></div>
+
+    <!-- Footer Content -->
+    <div id="footer-content" style="position: relative; z-index: 3; padding: 40px 30px 20px; max-width: 1600px; margin: 0 auto;">
+      <!-- Company Header Section -->
+      <div id="top" style="text-align: center; margin-bottom: 40px; padding: 25px 0; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
+        <div id="logo-details" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+          <a href='index.html' class='footer-logo-link' style="transition: all 0.3s ease; padding: 12px; border-radius: 15px; background: rgba(255,255,255,0.1); backdrop-filter: blur(15px);">
+            <img src='image/dx_logo.gif' alt='Digital Transformations PLT' style="width: 60px; height: auto; filter: brightness(1.1) contrast(1.1);">
+          </a>
+          <div class="footer-company-name" style="text-align: center;">
+            <span class="footer-main-name" style="color: #ffffff; font-size: 1.8em; font-weight: 800; background: linear-gradient(135deg, #ffffff 0%, #3498db 30%, #2ecc71 70%, #e74c3c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px;">Digital Transformations</span>
+            <sup class="footer-plt-super" style="color: #3498db; font-size: 0.7em; font-weight: 700; margin-left: 6px; padding: 3px 6px; background: rgba(52, 152, 219, 0.2); border-radius: 6px;">PLT</sup>
+            <p style="color: #bdc3c7; font-size: 0.95em; margin-top: 10px; font-weight: 400; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Your Complete Technology Solutions Partner</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rainbow Links Grid - All 8 Boxes in One Row -->
+      <div id="link-boxes" style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 15px; margin-bottom: 30px;">
+        
+        <!-- Our Society Box - Rainbow Red -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(255, 67, 54, 0.12) 0%, rgba(255, 67, 54, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(255, 67, 54, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #ff4336; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">🏠</span> Our Society
+          </li>
+          <li style="list-style: none; margin-bottom: 6px;">
+            <a href="index.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.8em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 4px 8px; border-radius: 6px;">Home</a>
+          </li>
+          <li style="list-style: none; margin-bottom: 6px;">
+            <a href="contact.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.8em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 4px 8px; border-radius: 6px;">Contact Us</a>
+        </div>
+
+        <!-- Main Services Box - Rainbow Orange -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(255, 152, 0, 0.12) 0%, rgba(255, 152, 0, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(255, 152, 0, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #ff9800; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">⚙️</span> Services
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service1.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">💻 Personal Computer</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service2.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📺 Large Display</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service3.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🌐 Network Infrastructure</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service4.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🚪 Access Control</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service5.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📹 CCTV & AV</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="service6.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">💡 Digital Consulting</a></li>
+        </div>
+        
+        <!-- Service 1 - Rainbow Yellow -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(255, 235, 59, 0.12) 0%, rgba(255, 235, 59, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(255, 235, 59, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #ffeb3b; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">💻</span> Service 1
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="cpu.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🖥️ CPU Solutions</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="gpu.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🎮 GPU Solutions</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="ram.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">💾 RAM Solutions</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="diy.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🔧 DIY PC Builds</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="usedlaptop.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">💻 Used Laptops</a></li>
+        </div>
+
+        <!-- Service 2 - Rainbow Green -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(76, 175, 80, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #4caf50; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">📺</span> Service 2
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="smart tv.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📺 Smart TVs</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="projector.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📽️ Projectors</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="led.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">💡 LED Displays</a></li>
+        </div>
+
+        <!-- Service 3 - Rainbow Cyan -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(0, 188, 212, 0.12) 0%, rgba(0, 188, 212, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(0, 188, 212, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #00bcd4; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">🌐</span> Service 3
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="networkcabling.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🔌 Network Cabling</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="router.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📡 Routers</a></li>
+        </div>
+
+        <!-- Service 4 - Rainbow Blue -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(33, 150, 243, 0.12) 0%, rgba(33, 150, 243, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(33, 150, 243, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #2196f3; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">🚪</span> Service 4
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="dooraccess.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🔐 Door Access</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="attendance.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">⏰ Attendance Systems</a></li>
+        </div>
+
+        <!-- Service 5 - Rainbow Purple -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(156, 39, 176, 0.12) 0%, rgba(156, 39, 176, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(156, 39, 176, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #9c27b0; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">📹</span> Service 5
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="cctv.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📹 CCTV Systems</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="avsystems.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🔊 AV Systems</a></li>
+        </div>
+
+        <!-- Service 6 - Rainbow Pink -->
+        <div class="box" style="background: linear-gradient(145deg, rgba(233, 30, 99, 0.12) 0%, rgba(233, 30, 99, 0.05) 100%); padding: 18px 12px; border-radius: 15px; border: 1px solid rgba(233, 30, 99, 0.2); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+          <li class="link_name" style="color: #e91e63; font-size: 1em; font-weight: 800; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1.1em;">💡</span> Service 6
+          </li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="digitalconsulting.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">📊 Digital Consulting</a></li>
+          <li style="list-style: none; margin-bottom: 4px;"><a href="strategy.html" style="color: #ecf0f1; text-decoration: none; font-size: 0.75em; font-weight: 500; transition: all 0.3s ease; display: block; padding: 3px 6px; border-radius: 4px;">🚀 Strategy & Innovation</a></li>
+        </div>
+
+    </div>
+
+    <div id='bottom-details'>
+      <div id='bottom_text'>
+        <p>Copyright &copy; 2025. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <!-- CSS Animations -->
+  <style>
+    @keyframes networkPulse {
+      0%, 100% { 
+        transform: scale(1) translateY(0px); 
+        opacity: 0.6; 
+      }
+      50% { 
+        transform: scale(1.2) translateY(-10px); 
+        opacity: 1; 
+      }
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    @keyframes badgePulse {
+      0%, 100% { 
+        transform: scale(1) translateY(0px); 
+        box-shadow: 0 15px 40px rgba(50, 130, 184, 0.6); 
+      }
+      50% { 
+        transform: scale(1.05) translateY(-3px); 
+        box-shadow: 0 20px 50px rgba(50, 130, 184, 0.8); 
+      }
+    }
+    
+    /* Hover Effects */
+    .service-page section > div > div:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 40px 100px rgba(50, 130, 184, 0.3) !important;
+    }
+    
+    .service-page section > div > div:hover img {
+      transform: scale(1.1) rotate(2deg);
+      filter: brightness(1.2) contrast(1.2) saturate(1.3);
+    }
+  </style>
+
+</body>
+</html>
